@@ -1,36 +1,84 @@
-let sliderElement = document.querySelector("#slider");
-let buttonElement = document.querySelector("#button");
+// let sliderElement = document.querySelector("#slider");
+const buttonElement = document.querySelector("#button");
 
-let sizePassword = document.querySelector("#valor");
-let password = document.querySelector("#password");
+const sizePassword = document.querySelector("#valor");
+const password = document.querySelector("#password");
 
-let containerPassword = document.querySelector("#container-password");
+const containerPassword = document.querySelector("#container-password");
+const lengthInput = document.querySelector("#length");
+const lettersInput = document.querySelector("#letters");
+const numbersInput = document.querySelector("#numbers");
+const symbolsInput = document.querySelector("#symbols");
 
-let letrasMinusculas = "abcdefghijklmnopqrstuvwxyz"
-let letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUWXYZ"
-let numeros = "0123456789"
-let simbolo = "!@*"
-let novaSenha = "";
 
-sizePassword.innerHTML = sliderElement.value;
+const getLetterLowerCase = () =>{
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+};
 
-slider.oninput = function(){
-    sizePassword.innerHTML = this.value
-}
+const getLetterUpperCase = () =>{
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+};
 
-function generatePassword(){
+const getNumber = () => {
+    return Math.floor(Math.random() * 10).toString();
+};
 
-    let pass = "";
+const getSymbol = () => {
+    const symbols = "!@#$%^&*(){}[]<>=/";
+    return symbols[Math.floor(Math.random() * symbols.length)];
+};
 
-    for(let i = 0, n= charset.length; i < sliderElement.value; ++i){
-        pass += charset.charAt(Math.floor(Math.random() * n));
-    }
+const generatePassword = (
+    getLetterLowerCase,
+    getLetterUpperCase,
+    getNumber,
+    getSymbol
+) => {
+    let password = "";
+    const passwordLength = +lengthInput.value;
 
-    containerPassword.classList.remove("hide");
-    password.innerHTML = pass;
-    novaSenha = pass;
-}
+  const generators = [];
 
-function copyPassword(){
-    navigator.clipboard.writeText(novaSenha);
-}
+  if (lettersInput.checked) {
+    generators.push(getLetterLowerCase, getLetterUpperCase);
+  }
+
+  if (numbersInput.checked) {
+    generators.push(getNumber);
+  }
+
+  if (symbolsInput.checked) {
+    generators.push(getSymbol);
+  }
+
+  console.log(generators.length);
+
+  if (generators.length === 0) {
+    return;
+  }
+
+  for (i = 0; i < passwordLength; i = i + generators.length) {
+    generators.forEach(() => {
+      const randomValue =
+        generators[Math.floor(Math.random() * generators.length)]();
+
+      password += randomValue;
+    });
+  }
+
+ 
+};
+
+
+buttonElement.addEventListener("click", () => {
+    generatePassword(
+        getLetterLowerCase,
+        getLetterUpperCase,
+        getNumber,
+        getSymbol
+    );
+});
+
+
+
+    
