@@ -21,10 +21,37 @@
                 <h2>Precisa de uma senha segura e exclusiva?</h2>
                 <h1>Gerador de Senha</h1>
             </div>
-              
+             <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="minuscula" value="minuscula"/>
+                    <span class="custom-checkbox"></span>
+                    <p>Inserir letras minúsculas</p>
+                  </label>
+
+                  <label>
+                    <input type="checkbox" id="maiuscula" value="maiuscula"/>
+                    <span class="custom-checkbox"></span>
+                    <p>INSERIR LETRAS MAIÚSCULAS</p>
+                  </label>
+
+                  <label>
+                    <input type="checkbox" id="numero" value="numero"/>
+                    <span class="custom-checkbox"></span>
+                    <p>Inserir números</p>
+                  </label>
+
+                  <label>
+                    <input type="checkbox" id="simbolos" value="simbolos"/>
+                    <span class="custom-checkbox"></span>
+                    <p>Inserir símbolos</p>
+                  </label>
+
+             </div>
+                
+            
             <div class="password-input">
                 <span>Tamanho <span id="valor"> </span> caracteres</span>
-                <input id="slider" class="slider" type="range" min="5" max="25" value="5">
+                <input id="slider" class="slider" type="range" min="4" max="25" value="5">
                 <button id="button" class="button-cta" onclick="generatePassword()">Gerar senha</button>
             </div>
         </main>

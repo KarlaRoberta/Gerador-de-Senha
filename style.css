@@ -12,9 +12,6 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-self: center;
-    flex-direction: column; */
     color:#f4d59a;
 }
 .border{
@@ -22,8 +19,6 @@ body{
     border-radius: 10px;
     width: 500px;
     margin-top: 30px;
-    
-    
 }
 .titleUm h2{
     display: flex;
@@ -42,7 +37,43 @@ body{
     justify-content: center;
     margin-bottom: 3rem;
 }
+label {
+    display: block;
+    padding-left: 4.4rem;
+    position: relative;
+  }
+  
+  input[type=checkbox] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
 
+.custom-checkbox {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+  
+    position: absolute;
+    top: 2px;
+    margin-left: -45px;
+  
+    height: 1rem;
+    width: 2rem;
+    border: 2px solid hsl(252, 11%, 91%);
+    cursor: pointer;
+  }
+  
+  .custom-checkbox:hover {
+    border-color: #FFB628;
+  }
+  
+  input[type=checkbox]:checked ~ .custom-checkbox {
+    border-color:#FFB628;
+    background-color:antiquewhite ;
+  }
+  
 .password-input{
     margin-top: 45px;
     max-width: 450px;
@@ -76,21 +107,9 @@ body{
 
 .container-password{
     max-width: 450px;
-    /* display: flex;
-    align-items: start;
-    flex-direction: column; */
-   
     
 }
 
-/* .password, span{
-    max-width: 450px;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    
-    
-} */
 .title{
     text-align: center;
     color: white;
