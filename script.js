@@ -1,22 +1,30 @@
 const sliderElement = document.querySelector("#slider"); 
 const buttonElement = document.querySelector("#button");
+const generatedPasswordValor = document.querySelector("#valor");
 
-const generatedPasswordElement = document.querySelector("#valor");
+const generatedPasswordElement = document.querySelector("#password");
 
-
+const generatePasswordButton = document.querySelector("#generate-password")
 const containerPassword = document.querySelector("#container-password");
 
+
+
+const copyPasswordButton = document.querySelector(".tooltip");
 const generatePasswordContainer = document.querySelector("#generate-options")
 const lengthInput = document.querySelector("#slider");
 const lettersInput = document.querySelector("#letters");
 const numbersInput = document.querySelector("#numbers");
 const symbolsInput = document.querySelector("#symbols");
-const copyPasswordButton = document.querySelector("#password");
 
-generatedPasswordElement.innerHTML = sliderElement.value;
+
+generatedPasswordValor.innerHTML = sliderElement.value;
+
+
+generatedPasswordElement.innerHTML = password;
+
 
 slider.oninput = function() {
-  generatedPasswordElement.innerHTML = this.value;
+  generatedPasswordValor.innerHTML = this.value;
 }
 
 const getLetterLowerCase = () =>{
@@ -35,55 +43,31 @@ const getSymbol = () => {
     const symbols = "!@#$%^&*(){}[]<>=/";
     return symbols[Math.floor(Math.random() * symbols.length)];
 };
+const generatePassword = () => {
+  let password = "";
+  const passwordLength = +generatedPasswordValor.innerHTML;
 
-const generatePassword= (
-    getLetterLowerCase,
-    getLetterUpperCase,
-    getNumber,
-    getSymbol
-) => {
-    let password = "";
+  const selectedGenerators = [];
 
-    const passwordLength = +generatedPasswordElement.value;
+  if (lettersInput.checked) selectedGenerators.push(getLetterLowerCase, getLetterUpperCase);
+  if (numbersInput.checked) selectedGenerators.push(getNumber);
+  if (symbolsInput.checked) selectedGenerators.push(getSymbol);
 
-  const generators = [];
+  if (selectedGenerators.length === 0) return;
 
-  if (lettersInput.checked) {
-    generators.push(getLetterLowerCase, getLetterUpperCase);
+  for (let i = 0; i < passwordLength; i++) {
+    const randomGenerator = selectedGenerators[Math.floor(Math.random() * selectedGenerators.length)];
+    password += randomGenerator();
   }
 
-  if (numbersInput.checked) {
-    generators.push(getNumber);
-  }
-
-  if (symbolsInput.checked) {
-    generators.push(getSymbol);
-  }
-
-  console.log(generators.length);
-
-  if (generators.length === 0) {
-    return;
-  }
-
-  for (i = 0; i < passwordLength; i = i + generators.length) {
-    generators.forEach(() => {
-      const randomValue = generators[Math.floor(Math.random() * generators.length)]();
-
-      password += randomValue;
-    });
-  }
-  
-  password = password.slice(0, passwordLength);
-  
+  generatedPasswordElement.innerHTML = password;
   containerPassword.classList.remove("hide");
   password.innerHTML = password;
-  novaSenha = password;
- 
+ novaSenha = password;
 };
 
 
-buttonElement.addEventListener("click", () => {
+generatePasswordButton.addEventListener("click", () => {
     generatePassword(
         getLetterLowerCase,
         getLetterUpperCase,
@@ -96,16 +80,14 @@ containerPassword.addEventListener("click", () => {
   generatePasswordContainer.classList.toggle("hide")
 });
 
-copyPasswordButton.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  const password = generatedPasswordElement.querySelector("h4").innerText;
+copyPasswordButton.addEventListener("click", () => {
+  const password = generatedPasswordElement.innerText;
 
   navigator.clipboard.writeText(password).then(() => {
     copyPasswordButton.innerText = "Senha copiada com sucesso!";
 
     setTimeout(() => {
-      copyPasswordButton.innerText = "Copiar";
+      copyPasswordButton.innerText = "Clique na senha para copiar 👆";
     }, 1000);
   });
 });
