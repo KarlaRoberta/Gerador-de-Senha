@@ -1,4 +1,4 @@
-# Sobre o projeto
+# Projeto em construção para melhorias 🛠
 Site que gera senhas confiáveis, com letras maiscúlas, minúsculas, símbolos e números.
 # Site do gerador de senhas
 https://karlaroberta.github.io/Gerador-de-Senha/
