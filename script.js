@@ -7,9 +7,10 @@ const generatedPasswordElement = document.querySelector("#password");
 const generatePasswordButton = document.querySelector("#generate-password")
 const containerPassword = document.querySelector("#container-password");
 
-
-
 const copyPasswordButton = document.querySelector(".tooltip");
+
+
+
 const generatePasswordContainer = document.querySelector("#generate-options")
 const lengthInput = document.querySelector("#slider");
 const lettersInput = document.querySelector("#letters");
@@ -80,19 +81,16 @@ containerPassword.addEventListener("click", () => {
   generatePasswordContainer.classList.toggle("hide")
 });
 
-copyPasswordButton.addEventListener("click", () => {
+function copyPassword() {
   const password = generatedPasswordElement.innerText;
 
   navigator.clipboard.writeText(password).then(() => {
-    copyPasswordButton.innerText = "Senha copiada com sucesso!";
+    const copyButton = document.querySelector("#password");
+    // copyButton.innerText = "Senha copiada com sucesso!";
 
     setTimeout(() => {
-      copyPasswordButton.innerText = "Clique na senha para copiar 👆";
-    }, 1000);
+      copyButton.innerText = password;
+    }, 2000);
   });
-});
-
-
-
-
+}
     
