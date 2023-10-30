@@ -25,7 +25,7 @@ body{
     text-align: center;
     justify-content: center;
     margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-size: 22px;
 }
 .titleUm h1{
@@ -35,8 +35,17 @@ body{
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
+
+.opcoes p{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    
+}
+
 label {
     display: block;
     padding-left: 4.4rem;
@@ -77,10 +86,8 @@ label {
 .password-input{
     margin-top: 45px;
     max-width: 450px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;    
 }
-
 
 .container-input span{
     color: white;
@@ -160,3 +167,47 @@ label {
     opacity: 1;
 }
 
+@media (max-width: 767px){
+    .border{
+        background-color: #f4d59a25;
+        border-radius: 10px;
+        width: 300px;
+        margin-top: 30px;
+    }
+
+    .opcoes p{
+       font-size: 14px;
+        
+    }
+
+   .password-input span{
+    margin-left: 15px;
+   }
+
+   .password-input .slider{
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+   }
+
+   .password-input .button-cta{
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+   }
+
+   .title{
+    margin-left: 15px;
+   }
+   
+   .password{
+    width: 270px;
+   }
+
+   .tooltip{
+    width: 280px;
+    }
+}
