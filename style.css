@@ -20,7 +20,7 @@ body{
     width: 500px;
     margin-top: 30px;
 }
-.titleUm h2{
+.title-first h2{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -28,7 +28,7 @@ body{
     margin-bottom: 2rem;
     font-size: 22px;
 }
-.titleUm h1{
+.title-first h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     color: white;
@@ -38,7 +38,7 @@ body{
     margin-bottom: 2rem;
 }
 
-.opcoes p{
+.options p{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -167,11 +167,11 @@ label {
     opacity: 1;
 }
 
-@media (max-width: 767px){
+/* @media (max-width: 767px){
     .border{
         background-color: #f4d59a25;
         border-radius: 10px;
-        width: 300px;
+        width: 400px;
         margin-top: 30px;
     }
 
@@ -210,4 +210,4 @@ label {
    .tooltip{
     width: 280px;
     }
-}
+} */

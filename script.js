@@ -1,10 +1,10 @@
 const sliderElement = document.querySelector("#slider"); 
-const buttonElement = document.querySelector("#button");
+// const buttonElement = document.querySelector("#button");
 const generatedPasswordValor = document.querySelector("#valor");
 
 const generatedPasswordElement = document.querySelector("#password");
 
-const generatePasswordButton = document.querySelector("#generate-password")
+const generatePasswordButton = document.querySelector("#generate-password");
 const containerPassword = document.querySelector("#container-password");
 
 const copyPasswordButton = document.querySelector(".tooltip");
@@ -79,6 +79,8 @@ generatePasswordButton.addEventListener("click", () => {
 
 containerPassword.addEventListener("click", () => {
   generatePasswordContainer.classList.toggle("hide")
+
+  
 });
 
 function copyPassword() {
@@ -86,7 +88,7 @@ function copyPassword() {
 
   navigator.clipboard.writeText(password).then(() => {
     const copyButton = document.querySelector("#password");
-    // copyButton.innerText = "Senha copiada com sucesso!";
+    copyButton.innerText = "Senha copiada com sucesso!";
 
     setTimeout(() => {
       copyButton.innerText = password;
