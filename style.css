@@ -171,11 +171,11 @@ label {
     .border{
         background-color: #f4d59a25;
         border-radius: 10px;
-        width: 300px;
+        width: 250px;
         margin-top: 30px;
     }
 
-    .opcoes p{
+    .options p{
        font-size: 14px;
         
     }
@@ -199,8 +199,8 @@ label {
 
    }
 
-   .title{
-    margin-left: 15px;
+   .title-first{
+    margin-left: 16px;
    }
    
    .password{
