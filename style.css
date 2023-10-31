@@ -167,11 +167,11 @@ label {
     opacity: 1;
 }
 
-/* @media (max-width: 767px){
+@media (max-width: 767px){
     .border{
         background-color: #f4d59a25;
         border-radius: 10px;
-        width: 400px;
+        width: 300px;
         margin-top: 30px;
     }
 
@@ -210,4 +210,4 @@ label {
    .tooltip{
     width: 280px;
     }
-} */
+}
