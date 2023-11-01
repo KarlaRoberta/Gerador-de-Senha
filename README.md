@@ -1,5 +1,5 @@
-# Projeto em gerador de senhas 🔒
-Site que gera senhas confiáveis, onde o usuario escolhe o que deve conter na sua senha. As opções são: letras, números e simbolos. Além disso, também seleciona o tamanho de caracteres da senha.
+# Projeto gerador de senhas 🔒
+O site proporciona a criação de senhas seguras, permitindo que o usuário escolha os elementos desejados: letras, números e símbolos. Além disso, é possível definir o comprimento da senha.
 # Site do gerador de senhas
 https://karlaroberta.github.io/Gerador-de-Senha/
 # Layout da aplicação
