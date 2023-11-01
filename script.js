@@ -1,15 +1,11 @@
 const sliderElement = document.querySelector("#slider"); 
-// const buttonElement = document.querySelector("#button");
 const generatedPasswordValor = document.querySelector("#valor");
-
 const generatedPasswordElement = document.querySelector("#password");
 
 const generatePasswordButton = document.querySelector("#generate-password");
 const containerPassword = document.querySelector("#container-password");
 
 const copyPasswordButton = document.querySelector(".tooltip");
-
-
 
 const generatePasswordContainer = document.querySelector("#generate-options")
 const lengthInput = document.querySelector("#slider");
@@ -19,8 +15,6 @@ const symbolsInput = document.querySelector("#symbols");
 
 
 generatedPasswordValor.innerHTML = sliderElement.value;
-
-
 generatedPasswordElement.innerHTML = password;
 
 
@@ -79,8 +73,6 @@ generatePasswordButton.addEventListener("click", () => {
 
 containerPassword.addEventListener("click", () => {
   generatePasswordContainer.classList.toggle("hide")
-
-  
 });
 
 function copyPassword() {
