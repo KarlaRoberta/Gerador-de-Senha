@@ -7,15 +7,15 @@
 }
 
 body{
-    background-color: #323232;
+    background-color: #cdd7e418;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    color:#f4d59a;
+    color:#222437;
 }
 .border{
-    background-color: #f4d59a25;
+    background-color: #18457f18;
     border-radius: 10px;
     width: 500px;
     margin-top: 30px;
@@ -31,14 +31,14 @@ body{
 .title-first h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    color: white;
+    color: #0174FB;
     display: flex;
     text-align: center;
     justify-content: center;
     margin-bottom: 2rem;
 }
 
-.options p{
+.options h2{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -70,17 +70,17 @@ label {
     
     height: 1rem;
     width: 2rem;
-    border: 2px solid hsl(252, 11%, 91%);
+    border: 2px solid #222437;
     cursor: pointer;
   }
 
   .custom-checkbox:hover {
-    border-color: #FFB628;
+    border-color:#0174FB;
   }
   
   input[type=checkbox]:checked ~ .custom-checkbox {
-    border-color:#FFB628;
-    background-color:antiquewhite ;
+    border-color:#222437;
+    background-color:#0174FB ;
   }
   
 .password-input{
@@ -102,7 +102,7 @@ label {
 }
 .button-cta{
     height: 40px;
-    background-color:#FFB628;
+    background-color:#18457f18;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
@@ -110,6 +110,7 @@ label {
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 18px;
+    color:#222437;
 }
 
 .container-password{
@@ -119,7 +120,7 @@ label {
 
 .title{
     text-align: center;
-    color: white;
+    color: #222437;
     font-size: 20px;
     margin-top: 24px;
     margin-bottom: 8px;
@@ -128,14 +129,14 @@ label {
 
 .password{
     height: 60px;
-    background-color:#f4d59a;
+    background-color:white;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
     color: black;
-    border: 1px solid #FFB628;
+    border: 1px solid #18447F;
     transition: transform 0.5s;
     margin-bottom: 40px;
 }
@@ -148,7 +149,7 @@ label {
     position: relative;
     top: -17px;
     padding: 6px 8px;
-    background:rgba(0, 0, 0, 0.195);
+    background:#18457f18;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -169,19 +170,19 @@ label {
 
 @media (max-width: 767px){
     .border{
-        background-color: #f4d59a25;
+        background-color:#18457f18;
         border-radius: 10px;
-        width: 295px;
+        width: 300px;
         margin-top: 30px;
     }
 
-    .options p{
-       font-size: 14px;
+    .options h2{
+       font-size: 15px;
         
     }
 
-   .password-input span{
-    margin-left: 15px;
+   .password-input {
+   padding-left: 8px;
    }
 
    .password-input .slider{
@@ -199,10 +200,10 @@ label {
 
    }
 
-   .title-first{
-    margin-left: 16px;
+   .title{
+    margin-left: 5px;
+    
    }
-   
    .password{
     width: 270px;
    }
@@ -210,4 +211,6 @@ label {
    .tooltip{
     width: 280px;
     }
+
+    
 }
