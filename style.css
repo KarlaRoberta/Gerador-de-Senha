@@ -4,34 +4,42 @@
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    
 }
-
+img{
+    display: flex;
+    width: 80%;
+    position: relative;
+    right: 100%;
+    top: 12%;
+}
 body{
-    background-color: #cdd7e418;
-    width: 100%;
-    height: 100vh;
+    /* width: 100%; */
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    color:#222437;
+    color:aliceblue;
 }
 .border{
-    background-color: #18457f18;
-    border-radius: 10px;
-    width: 500px;
-    margin-top: 30px;
+    background-color: #032068;
+    width: 50%;
+    margin-left: 50%;
+    height: 100vh;
+
 }
 .title-first h2{
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: -29rem;
     margin-bottom: 2rem;
     font-size: 22px;
+    
 }
 .title-first h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    color: #0174FB;
+    color: #DFE2F7;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -49,7 +57,7 @@ body{
 
 label {
     display: block;
-    padding-left: 4.4rem;
+    padding-left: 20rem;
     position: relative;
   }
   
@@ -66,21 +74,21 @@ label {
     justify-content: start;
     position: absolute;
     top: 2px;
-    margin-left: -45px;
+    margin-left: -60px;
     
     height: 1rem;
     width: 2rem;
-    border: 2px solid #222437;
+    border: 2px solid #DFE2F7;
     cursor: pointer;
   }
 
   .custom-checkbox:hover {
-    border-color:#0174FB;
+    border-color: white;
   }
   
   input[type=checkbox]:checked ~ .custom-checkbox {
     border-color:#222437;
-    background-color:#0174FB ;
+    background-color: #DFE2F7;
   }
   
 .password-input{
@@ -102,7 +110,7 @@ label {
 }
 .button-cta{
     height: 40px;
-    background-color:#18457f18;
+    background-color:#DFE2F7;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
@@ -110,17 +118,16 @@ label {
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 18px;
-    color:#222437;
+    color: #032068;
 }
 
 .container-password{
     max-width: 450px;
-    
 }
 
 .title{
     text-align: center;
-    color: #222437;
+    color: aliceblue;
     font-size: 20px;
     margin-top: 24px;
     margin-bottom: 8px;
@@ -135,8 +142,8 @@ label {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    color: black;
-    border: 1px solid #18447F;
+    color: #032068;
+    border: 1px solid white;
     transition: transform 0.5s;
     margin-bottom: 40px;
 }
@@ -149,7 +156,8 @@ label {
     position: relative;
     top: -17px;
     padding: 6px 8px;
-    background:#18457f18;
+    background:rgba(240, 248, 255, 0.163);
+    color: white;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -169,24 +177,45 @@ label {
 }
 
 @media (max-width: 767px){
+    
+    img{
+        position: absolute;
+        border-radius: 20px;
+        top: 15%; 
+        left: 21%;
+        width: 60%;
+        /* margin-right: -50px; 15*/
+     
+    }
+    .title-first h1{
+        margin-top: -115px;
+    }
+    .title-first h2{
+        margin-top: 85px;
+    }
     .border{
-        background-color:#18457f18;
-        border-radius: 10px;
-        width: 300px;
-        margin-top: 30px;
+        background-color: #032068;
+        position: relative;
+        right: 38%;
+        width: 80%;
+        height: 145vh;
+        
     }
 
     .options h2{
        font-size: 15px;
-        
+       margin-top: 385px;
+       
     }
 
    .password-input {
    padding-left: 8px;
+   font-size: 18px;
+   
    }
 
    .password-input .slider{
-    width: 280px;
+    width: 400px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -199,13 +228,19 @@ label {
     text-align: center;
 
    }
+   label {
+    margin-left: -100px;
+    margin-bottom: 15px;
+   }
 
    .title{
-    margin-left: 5px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
     
    }
    .password{
-    width: 270px;
+    width: 270px; 
    }
 
    .tooltip{
@@ -213,4 +248,41 @@ label {
     }
 
     
+}
+
+@media (max-width: 600px){
+
+    img{
+        width: 80%;
+        margin-left: -30px;
+    }
+
+    .border{
+        right: 50%;
+        width: 101%;
+        height: 145vh;
+        overflow-x: hidden;
+    }
+    .title-first h2{
+        margin-top: 10px;
+    }
+    .title-first h1{
+        margin-top: 30px;
+    }
+    .options h2{
+        margin-top: 332px;
+        font-size: 18px;
+    }
+    label {
+        margin-left: -40%;
+    
+    }
+    p{
+        font-size: 15px;
+        width: 160%;
+    }
+    .password-input .slider{
+        width: 350px;
+        
+    }
 }
