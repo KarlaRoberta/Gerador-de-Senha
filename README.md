@@ -4,15 +4,16 @@ O site proporciona a criação de senhas seguras, permitindo que o usuário esco
 https://karlaroberta.github.io/Gerador-de-Senha/
 # Layout da aplicação
 ## Página inicial
-![image](https://github.com/KarlaRoberta/Gerador-de-Senha/assets/96659292/06e214db-e6bc-4beb-91f3-b543a24890dd)
+![image](https://github.com/KarlaRoberta/Gerador-de-Senha/assets/96659292/21c5c9ef-6d65-4906-8e1d-120fff938b7a)
 
 
 ## Quando clica para gerar a senha:
-![image](https://github.com/KarlaRoberta/Gerador-de-Senha/assets/96659292/818d2e66-1e34-4f5c-95f7-a344aec5ca43)
+![image](https://github.com/KarlaRoberta/Gerador-de-Senha/assets/96659292/ec89d474-66b6-4a17-9656-dd66c0a551ce)
 
 
 ## Para copiar a senha gerada:
-![image](https://github.com/KarlaRoberta/Gerador-de-Senha/assets/96659292/9a9a099e-cd82-431d-81db-42f3570da4bc)
+![image](https://github.com/KarlaRoberta/Gerador-de-Senha/assets/96659292/bed67a2c-2cf6-47d6-9b95-a00c96d64f9b)
+
 
 
 # Tecnologias utilizadas:
